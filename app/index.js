@@ -301,7 +301,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 }*/
 
 //Bài 1_d
-export default function Page(){
+/*export default function Page(){
     const styles = StyleSheet.create({
         container: {
           flex: 1,
@@ -454,4 +454,167 @@ export default function Page(){
          </View>
        </View>
      )
+}*/
+
+//Bài 1_e
+export default function Page(){
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'rgba(49, 170, 82, 0.19)',
+            gap: 25
+        },
+        input: {
+            flexDirection: 'row',
+            height: 45,
+            width: 360,
+            backgroundColor: 'rgba(196, 196, 196, 0.30)',
+            borderRadius: 5,
+            alignItems: 'center',
+            paddingHorizontal: 10,
+        },
+        textInput: {
+            fontSize: 18,
+            fontWeight: '600',
+            flex: 1,
+        },
+        textRadio: {
+            textAlign: 'center',
+            fontSize: 18,
+            fontWeight: '600',
+            paddingHorizontal: 20
+        },
+        button: {
+            alignItems: 'center',
+            justifyContent: 'center',
+            paddingVertical: 10,
+            paddingHorizontal: 30,
+            width: 360,
+            height: 45,
+            marginBottom: -15,
+            backgroundColor: '#E53935',
+            borderRadius: 5,
+        },
+        textBtn: {
+            color: '#FFF',
+            textAlign: 'center',
+            fontSize: 20,
+            fontWeight: 'bold'
+        },
+        pan: {
+            flexDirection: 'row',
+            justifyContent: 'center',
+            height: 25,
+            width: 360,
+            marginBottom: -10
+        },
+        radioContainer: {
+            flexDirection: 'row',
+            alignItems: 'center'
+        },
+        radioButton: {
+            width: 23,
+            height: 23,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginRight: 10,
+            marginLeft: 10
+        },
+        radioText: {
+            fontSize: 18,
+            fontWeight: '600',
+            marginLeft: 10
+        }
+      });
+    
+    return (
+        <View style={styles.container}>
+            <Text style={{ alignContent: 'center', fontWeight: 'bold', fontSize: 25 }}>
+                REGISTER
+            </Text>
+          
+            <View style={styles.input}>
+                <TextInput
+                placeholder="Name"
+                placeholderTextColor="#000"
+                style={styles.textInput}
+                />
+            </View>
+            <View style={styles.input}>
+                <TextInput
+                placeholder="Phone"
+                placeholderTextColor="#000"
+                style={styles.textInput}
+                />
+            </View>
+            <View style={styles.input}>
+                <TextInput
+                placeholder="Email"
+                placeholderTextColor="#000"
+                style={styles.textInput}
+                />
+            </View>
+            <View style={styles.input}>
+                <TextInput
+                placeholder="Password"
+                placeholderTextColor="#000"
+                secureTextEntry
+                style={styles.textInput}
+                />
+                <Svg xmlns="http://www.w3.org/2000/svg" width="38" height="36" viewBox="0 0 38 36" fill="none" style={{ paddingLeft: 150, paddingTop: 5 }}>
+                <G clipPath="url(#clip0_12_116)">
+                    <Path d="M19 13.0909C16.1414 13.0909 13.8182 15.2918 13.8182 18C13.8182 20.7082 16.1414 22.9091 19 22.9091C21.8587 22.9091 24.1819 20.7082 24.1819 18C24.1819 15.2918 21.8586 13.0909 19 13.0909Z" fill="black" />
+                    <Path d="M19 5.72729C10.3636 5.72729 2.98821 10.8163 0 18C2.98821 25.1836 10.3636 30.2728 19 30.2728C27.645 30.2728 35.0119 25.1836 38.0001 18C35.0119 10.8163 27.645 5.72729 19 5.72729ZM19 26.1818C14.2328 26.1818 10.3636 22.5163 10.3636 18C10.3636 13.4836 14.2328 9.81818 19 9.81818C23.7673 9.81818 27.6364 13.4837 27.6364 18C27.6364 22.5164 23.7673 26.1818 19 26.1818Z" fill="black" />
+                </G>
+                <Defs>
+                    <ClipPath id="clip0_12_116">
+                    <Rect width="38" height="36" fill="white" />
+                    </ClipPath>
+                </Defs>
+                </Svg>
+            </View>
+            <View style={styles.input}>
+                <TextInput
+                placeholder="Birthday"
+                placeholderTextColor="#000"
+                style={styles.textInput}
+                />
+            </View>
+            
+            <View style={styles.pan}>
+                <View style={styles.radioContainer}>
+                <View style={styles.radioButton}>
+                    <Svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <Circle cx="11.5" cy="11.5" r="10.5" stroke="black" strokeWidth="2" />
+                    </Svg>
+                </View>
+                <Text style={styles.radioText}>
+                    Male
+                </Text>
+                </View>
+                <View style={styles.radioContainer}>
+                <View style={styles.radioButton}>
+                    <Svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+                    <Circle cx="11.5" cy="11.5" r="10.5" stroke="black" strokeWidth="2" />
+                    </Svg>
+                </View>
+                <Text style={styles.radioText}>
+                    Female
+                </Text>
+                </View>
+            </View>
+            
+            <Pressable style={styles.button}>
+                <Text style={styles.textBtn}>
+                REGISTER
+                </Text>
+            </Pressable>
+        
+            <Text style={{ justifyContent: 'center', fontSize: 14, fontWeight: '500' }}>
+                When you agree to terms and conditions
+            </Text>
+            </View>
+    );
 }
