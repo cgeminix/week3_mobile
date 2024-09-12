@@ -221,7 +221,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 }*/
 
 //Bài 1_c
-export default function Page() {
+/*export default function Page() {
     const styles = StyleSheet.create({
       container: {
         flex: 1,
@@ -298,4 +298,160 @@ export default function Page() {
         </Pressable>
       </View>
     );
-  }
+}*/
+
+//Bài 1_d
+export default function Page(){
+    const styles = StyleSheet.create({
+        container: {
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+          backgroundColor: 'rgba(49, 170, 82, 0.19)',
+          gap: 30
+        },
+        input: {
+          flexDirection: 'row',
+          height: 45,
+          width: 305,
+          backgroundColor: 'rgba(196, 196, 196, 0.30)',
+          borderRadius: 5,
+          alignItems: 'center',
+          paddingHorizontal: 10,
+        },
+        textInput: {
+          fontSize: 18,
+          fontWeight: '600',
+          flex: 1,
+        },
+        button: {
+          alignItems: 'center',
+          justifyContent: 'center',
+          paddingVertical: 10,
+          paddingHorizontal: 30,
+          width: 305,
+          height: 45,
+          backgroundColor: '#E53935',
+          marginTop: 20,
+          borderRadius: 5,
+        },
+        textBtn: {
+          color: '#FFF',
+          textAlign: 'center',
+          fontSize: 20,
+          fontWeight: 'bold'
+        },
+        textOut: {
+          color: '#000',
+          fontSize: 14,
+          fontWeight: '500',
+          marginTop: -10
+        },
+        pan: {
+          flexDirection: 'row',
+          justifyContent: 'center',
+          height: 54,
+          width: 300
+        },
+        borderFace: {
+          height: 45,
+          width: 100,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#003399'
+        },
+        borderZalo: {
+          height: 45,
+          width: 100,
+          justifyContent: 'center',
+          alignItems: 'center',
+          backgroundColor: '#0099CC'
+        },
+        borderGoogle: {
+          height: 45,
+          width: 100,
+          justifyContent: 'center',
+          alignItems: 'center',
+          borderWidth: 1,
+          borderColor: '#0099CC',
+        },
+        textBorder: {
+          color: '#fff',
+          fontWeight: 'bold',
+          fontSize: 35
+        },
+    });
+     return(
+        <View style={styles.container}>
+        <Text style={{ alignContent: 'center', fontWeight: 'bold', fontSize: 25, marginBottom: 20 }}>
+          LOGIN
+        </Text>
+  
+        <View style={styles.input}>
+          <TextInput
+            placeholder="Email"
+            placeholderTextColor="#000"
+            style={styles.textInput}
+          />
+        </View>
+  
+        <View style={styles.input}>
+          <TextInput
+            placeholder="Password"
+            placeholderTextColor="#000"
+            style={styles.textInput}
+          />
+          <Svg xmlns="http://www.w3.org/2000/svg" width="38" height="36" viewBox="0 0 38 36" fill="none" style={{ paddingLeft: 150, paddingTop: 5 }}>
+            <G clipPath="url(#clip0_12_116)">
+              <Path d="M19 13.0909C16.1414 13.0909 13.8182 15.2918 13.8182 18C13.8182 20.7082 16.1414 22.9091 19 22.9091C21.8587 22.9091 24.1819 20.7082 24.1819 18C24.1819 15.2918 21.8586 13.0909 19 13.0909Z" fill="black" />
+              <Path d="M19 5.72729C10.3636 5.72729 2.98821 10.8163 0 18C2.98821 25.1836 10.3636 30.2728 19 30.2728C27.645 30.2728 35.0119 25.1836 38.0001 18C35.0119 10.8163 27.645 5.72729 19 5.72729ZM19 26.1818C14.2328 26.1818 10.3636 22.5163 10.3636 18C10.3636 13.4836 14.2328 9.81818 19 9.81818C23.7673 9.81818 27.6364 13.4837 27.6364 18C27.6364 22.5164 23.7673 26.1818 19 26.1818Z" fill="black" />
+            </G>
+            <Defs>
+              <ClipPath id="clip0_12_116">
+                <Rect width="38" height="36" fill="white" />
+              </ClipPath>
+            </Defs>
+          </Svg>
+        </View>
+  
+        <Pressable style={styles.button}>
+          <Text style={styles.textBtn}>
+            LOGIN
+          </Text>
+        </Pressable>
+  
+        <Text style={styles.textOut}>
+          When you agree to terms and conditions
+        </Text>
+        <Text style={{ color: '#5D25FA', justifyContent: 'center', marginTop: -20, marginBottom: -8 }}>
+          Forgot your password?
+        </Text>
+        <Text style={styles.textOut}>
+          Or login with
+        </Text>
+  
+        <View style={styles.pan}>
+          <View style={styles.borderFace}>
+            <Text style={styles.textBorder}>
+              f
+            </Text>
+          </View>
+          <View style={styles.borderZalo}>
+            <Text style={styles.textBorder}>
+              Z
+            </Text>
+          </View>
+           <View style={styles.borderGoogle}>
+             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
+               <path d="M8.20312 17.5C8.20312 15.7659 8.68089 14.1415 9.51091 12.7506V6.85065H3.61095C1.2693 9.89182 0 13.5982 0 17.5C0 21.4018 1.2693 25.1082 3.61095 28.1494H9.51091V22.2494C8.68089 20.8585 8.20312 19.2341 8.20312 17.5Z" fill="#FBBD00"/>
+               <path d="M17.5 26.7969L13.3984 30.8985L17.5 35C21.4019 35 25.1082 33.7307 28.1494 31.3891V25.4954H22.2557C20.8526 26.3284 19.2214 26.7969 17.5 26.7969Z" fill="#0F9D58"/>
+               <path d="M9.51092 22.2494L3.61096 28.1494C4.07458 28.7515 4.57941 29.3281 5.12567 29.8744C8.43098 33.1796 12.8256 35 17.5 35V26.7969C14.1077 26.7969 11.1346 24.9703 9.51092 22.2494Z" fill="#31AA52"/>
+               <path d="M35 17.5C35 16.4353 34.9036 15.3686 34.7134 14.3297L34.5596 13.489H17.5V21.6921H25.8024C24.9962 23.2959 23.7565 24.6043 22.2556 25.4955L28.1493 31.3891C28.7514 30.9255 29.328 30.4207 29.8743 29.8744C33.1797 26.569 35 22.1744 35 17.5Z" fill="#3C79E6"/>
+               <path d="M24.0739 10.9261L24.7989 11.6511L30.5994 5.85067L29.8744 5.12565C26.5691 1.82034 22.1745 0 17.5 0L13.3984 4.10156L17.5 8.20312C19.9832 8.20312 22.3179 9.17014 24.0739 10.9261Z" fill="#CF2D48"/>
+               <path d="M17.5 8.20312V0C12.8256 0 8.43099 1.82034 5.12561 5.12559C4.57935 5.67185 4.07451 6.24846 3.6109 6.85063L9.51086 12.7506C11.1346 10.0297 14.1078 8.20312 17.5 8.20312Z" fill="#EB4132"/>
+             </svg>
+           </View>
+         </View>
+       </View>
+     )
+}
