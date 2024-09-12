@@ -123,7 +123,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 }*/
 
 //Bài 1_b
-export default function Page(){
+/*export default function Page(){
     const styles = StyleSheet.create({
         container: {
           flex: 1,
@@ -172,7 +172,6 @@ export default function Page(){
                 style={styles.background}
             />
     
-        
             <Svg xmlns="http://www.w3.org/2000/svg" width="105" height="117" viewBox="0 0 105 117" fill="none">
                 <Defs>
                 <ClipPath id="clip0_6_2">
@@ -219,4 +218,84 @@ export default function Page(){
             </Pressable>
         </View>
     );
-}
+}*/
+
+//Bài 1_c
+export default function Page() {
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: 25
+      },
+      background: {
+        ...StyleSheet.absoluteFillObject,
+      },
+      pan: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        height: 50,
+        width: 360
+      },
+      border: {
+        borderWidth: 1,
+        width: 50,
+        height: 50,
+        borderColor: '#000',
+        backgroundColor: 'rgba(196, 196, 196, 0.00)',
+        margin: 2
+      },
+      button: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 10,
+        paddingHorizontal: 30,
+        width: 305,
+        height: 45,
+        backgroundColor: '#E3C000'
+      },
+      textBtn: {
+        color: '#000',
+        textAlign: 'center',
+        fontSize: 18,
+        fontWeight: 'bold'
+      }
+    });
+  
+    return (
+      <View style={styles.container}>
+        <LinearGradient
+            colors={['rgba(0, 204, 249, 0.01)', '#00CCF9']} // Bạn có thể điều chỉnh màu sắc theo nhu cầu
+            style={styles.background}
+        />
+        
+        <Text style={{ textAlign: 'center', fontSize: 60, fontWeight: 'bold' }}>
+          CODE
+        </Text>
+        
+        <Text style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold' }}>
+          VERIFICATION
+        </Text>
+        
+        <Text style={{ textAlign: 'center', fontSize: 15, fontWeight: 'bold' }}>
+          Enter one-time password sent to {'\n'}++849092605798
+        </Text>
+        
+        <View style={styles.pan}>
+          <View style={styles.border} />
+          <View style={styles.border} />
+          <View style={styles.border} />
+          <View style={styles.border} />
+          <View style={styles.border} />
+          <View style={styles.border} />
+        </View>
+        
+        <Pressable style={styles.button}>
+          <Text style={styles.textBtn}>
+            VERIFY CODE
+          </Text>
+        </Pressable>
+      </View>
+    );
+  }
